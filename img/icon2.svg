@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#f5f8fa"/>
+  
+  <!-- House outline -->
+  <path d="M50,110 L50,160 L150,160 L150,110 L100,70 Z" fill="#e1e8ed" stroke="#8899a6" stroke-width="2"/>
+  
+  <!-- Flow lines connecting rooms -->
+  <path d="M70,130 C90,110 110,110 130,130" stroke="#1da1f2" stroke-width="3" fill="none" stroke-dasharray="2,2"/>
+  <path d="M70,130 C70,150 130,150 130,130" stroke="#1da1f2" stroke-width="3" fill="none"/>
+  
+  <!-- Room icons -->
+  <!-- Kitchen -->
+  <circle cx="70" cy="130" r="15" fill="#ffffff" stroke="#8899a6" stroke-width="1"/>
+  <rect x="65" y="125" width="10" height="5" fill="#66757f"/>
+  <rect x="63" y="130" width="14" height="8" fill="#66757f"/>
+  
+  <!-- Living room -->
+  <circle cx="100" cy="120" r="10" fill="#ffffff" stroke="#8899a6" stroke-width="1"/>
+  <rect x="95" y="115" width="10" height="5" fill="#66757f"/>
+  <rect x="95" y="122" width="10" height="3" fill="#66757f"/>
+  
+  <!-- Laundry -->
+  <circle cx="130" cy="130" r="15" fill="#ffffff" stroke="#8899a6" stroke-width="1"/>
+  <circle cx="130" cy="130" r="10" fill="none" stroke="#66757f" stroke-width="2"/>
+  <circle cx="130" cy="130" r="5" fill="none" stroke="#66757f" stroke-width="1"/>
+  
+  <!-- Person -->
+  <circle cx="100" cy="145" r="5" fill="#ffac33"/>
+  <path d="M100,150 L100,156" stroke="#ffac33" stroke-width="3"/>
+  <path d="M95,154 L105,154" stroke="#ffac33" stroke-width="2"/>
+  <path d="M97,160 L103,160" stroke="#ffac33" stroke-width="2"/>
+  
+  <!-- Sparkles indicating efficiency -->
+  <path d="M85,100 L87,105 L90,100 L87,95 Z" fill="#ffcc4d"/>
+  <path d="M115,100 L117,105 L120,100 L117,95 Z" fill="#ffcc4d"/>
+  <path d="M100,85 L102,90 L105,85 L102,80 Z" fill="#ffcc4d"/>
+</svg>

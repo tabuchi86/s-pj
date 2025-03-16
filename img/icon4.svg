@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#e6f2ff"/>
+  
+  <!-- House silhouette -->
+  <path d="M50,90 L100,50 L150,90 L150,160 L50,160 Z" fill="#ffffff" stroke="#555555" stroke-width="2"/>
+  
+  <!-- Insulation layer -->
+  <path d="M55,93 L100,58 L145,93 L145,155 L55,155 Z" fill="none" stroke="#ffcc66" stroke-width="4" stroke-dasharray="5,3"/>
+  
+  <!-- Window -->
+  <rect x="65" y="100" width="25" height="25" fill="#b3e0ff" stroke="#555555" stroke-width="1.5"/>
+  <line x1="77.5" y1="100" x2="77.5" y2="125" stroke="#555555" stroke-width="1"/>
+  <line x1="65" y1="112.5" x2="90" y2="112.5" stroke="#555555" stroke-width="1"/>
+  
+  <!-- Door -->
+  <rect x="110" y="120" width="20" height="40" fill="#e6e6e6" stroke="#555555" stroke-width="1.5"/>
+  <circle cx="115" cy="140" r="2" fill="#555555"/>
+  
+  <!-- Summer side (left) -->
+  <circle cx="30" cy="100" r="15" fill="#ffcc00"/>
+  <path d="M30,85 L30,80" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M30,120 L30,115" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M15,100 L10,100" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M50,100 L45,100" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M19,89 L15,85" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M41,111 L45,115" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M19,111 L15,115" stroke="#ffcc00" stroke-width="2"/>
+  <path d="M41,89 L45,85" stroke="#ffcc00" stroke-width="2"/>
+  
+  <!-- Cool air indicator (left) -->
+  <path d="M45,130 C55,120 65,140 75,130" stroke="#66ccff" stroke-width="2" fill="none"/>
+  <path d="M72,130 L75,130 L73,125" stroke="#66ccff" stroke-width="2" fill="none"/>
+  
+  <!-- Winter side (right) -->
+  <path d="M160,90 L170,100 L160,110 Z" fill="#ffffff" stroke="#99ccff" stroke-width="1.5"/>
+  <path d="M165,85 L175,95 L165,105 Z" fill="#ffffff" stroke="#99ccff" stroke-width="1.5"/>
+  <path d="M170,80 L180,90 L170,100 Z" fill="#ffffff" stroke="#99ccff" stroke-width="1.5"/>
+  
+  <!-- Warm air indicator (right) -->
+  <path d="M125,130 C135,120 145,140 155,130" stroke="#ff9966" stroke-width="2" fill="none"/>
+  <path d="M152,130 L155,130 L153,125" stroke="#ff9966" stroke-width="2" fill="none"/>
+  
+  <!-- Temperature indicators -->
+  <circle cx="75" cy="75" r="10" fill="#ffffff" stroke="#66ccff" stroke-width="1.5"/>
+  <text x="75" y="79" font-family="Arial" font-size="12" text-anchor="middle" fill="#66ccff">↓</text>
+  
+  <circle cx="125" cy="75" r="10" fill="#ffffff" stroke="#ff9966" stroke-width="1.5"/>
+  <text x="125" y="79" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff9966">↑</text>
+</svg>
