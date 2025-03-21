@@ -112,16 +112,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollY = window.scrollY;
     const fixedButtons = document.querySelector(".fixed-bottom-buttons");
-    let hasScrolled = false;
+    const header = document.querySelector(".fixed-header");
+
+    function checkHeaderVisibility() {
+        const headerRect = header.getBoundingClientRect();
+        return headerRect.bottom > 0; // ヘッダーが画面内にあるかどうか
+    }
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > lastScrollY && window.scrollY > 100) {
-            // 下にスクロール＆スクロール量が100pxを超えたら表示
+        if (window.scrollY > 100) {
             fixedButtons.classList.add("show");
-            hasScrolled = true;
         }
 
-        // 一度表示されたら消えない
+        // ヘッダーが見えているときは非表示
+        if (checkHeaderVisibility()) {
+            fixedButtons.classList.add("hidden");
+        } else {
+            fixedButtons.classList.remove("hidden");
+        }
+
         lastScrollY = window.scrollY;
     });
 });
