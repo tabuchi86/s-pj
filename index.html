@@ -70,17 +70,25 @@
 }
 .fixed-bottom-buttons {
     position: fixed;
-    bottom: -100px; /* 初期状態では隠しておく */
+    bottom: 0;
     left: 0;
     width: 100%;
-    background: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px 0;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    transition: bottom 0.3s ease-in-out;
-    Z-index:1000;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%); /* 初期状態で下に隠す */
+    pointer-events: none;
+}
+
+.fixed-bottom-buttons.show {
+    opacity: 1;
+    transform: translateY(0); /* 表示時に上にスライド */
+    pointer-events: auto;
 }
 
 .fixed-bottom-buttons a {
@@ -102,15 +110,19 @@
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    let fixedButtons = document.querySelector(".fixed-bottom-buttons");
     let lastScrollY = window.scrollY;
+    const fixedButtons = document.querySelector(".fixed-bottom-buttons");
+    let hasScrolled = false;
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-            fixedButtons.style.bottom = "0";
-        } else {
-            fixedButtons.style.bottom = "-100px";
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            // 下にスクロール＆スクロール量が100pxを超えたら表示
+            fixedButtons.classList.add("show");
+            hasScrolled = true;
         }
+
+        // 一度表示されたら消えない
+        lastScrollY = window.scrollY;
     });
 });
 
