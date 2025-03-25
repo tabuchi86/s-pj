@@ -68,28 +68,51 @@
 	max-width: 100%;
 	border-radius: 10px;
 }
-.fixed-bottom-buttons {
+/* PC用 */
+@media screen and (min-width: 769px) {
+  .fixed-header {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     z-index: 1000;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(100%); /* 初期状態で下に隠す */
-    pointer-events: none;
+    background: white;
+  }
+  .fixed-bottom-buttons {
+    display: none !important;
+  }
 }
 
-.fixed-bottom-buttons.show {
+/* SPのみ */
+@media screen and (max-width: 768px) {
+  .fixed-bottom-buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: white;
+    z-index: 1000;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none; /* 非表示時はクリック無効 */
+  }
+
+  .fixed-bottom-buttons.show {
+    transform: translateY(0);
     opacity: 1;
-    transform: translateY(0); /* 表示時に上にスライド */
     pointer-events: auto;
+  }
+
+  .fixed-bottom-buttons.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
 }
+
+
 
 .fixed-bottom-buttons a {
     padding: 10px 20px;
@@ -110,30 +133,34 @@
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    const isSP = window.innerWidth <= 768;
+    if (!isSP) return; // PCのときはスクリプトをスキップ
+
     let lastScrollY = window.scrollY;
     const fixedButtons = document.querySelector(".fixed-bottom-buttons");
     const header = document.querySelector(".fixed-header");
 
     function checkHeaderVisibility() {
         const headerRect = header.getBoundingClientRect();
-        return headerRect.bottom > 0; // ヘッダーが画面内にあるかどうか
+        return headerRect.bottom > 0; // ヘッダーが画面内にあるか
     }
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
-            fixedButtons.classList.add("show");
-        }
+    if (window.scrollY > 100) {
+        fixedButtons.classList.add("show");
+    } else {
+        fixedButtons.classList.remove("show");
+    }
 
-        // ヘッダーが見えているときは非表示
-        if (checkHeaderVisibility()) {
-            fixedButtons.classList.add("hidden");
-        } else {
-            fixedButtons.classList.remove("hidden");
-        }
-
-        lastScrollY = window.scrollY;
-    });
+    if (checkHeaderVisibility()) {
+        fixedButtons.classList.add("hidden");
+    } else {
+        fixedButtons.classList.remove("hidden");
+    }
 });
+
+});
+</script>
 
 </script>
 </head>
@@ -153,6 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
     <a href="https://sole-living.soyo-inc.co.jp/entry/#form" class="btn btn-dark">来場予約WEB受付中</a>
     <a href="https://liff.line.me/2006831869-Lr67VbWe/landing?follow=%40526ssvbf&lp=9Y4Wf1&liff_id=2006831869-Lr67VbWe" class="btn btn-success">LINE登録</a>
 </div>
+
+
 
 <div class="content">
 <!-- YouTube Video Section -->
