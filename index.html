@@ -23,13 +23,17 @@
 <link rel="stylesheet" href="css/globals.css">
 
 <style>
-.header-logo
+.header-logo{
 	height:30px;
 
 }
 .header-buttons{
 	text-align:right;
 }
+.logo {
+ width:300px;
+}
+
 .article-2 {
 	position: relative;
 	text-align: center;
@@ -68,6 +72,15 @@
 .article-3 .image-container img {
 	max-width: 100%;
 	border-radius: 10px;
+}
+.img-circle {
+  width: 200px;        /* 幅と高さは同じにする */
+  height: 200px;
+  border-radius: 50%;  /* 角を丸くして円に */
+  object-fit: cover;   /* 画像を切り取ってフィットさせる */
+}
+.img-p{
+ text-align:center;
 }
 /* PC用 */
 @media screen and (min-width: 769px) {
@@ -147,6 +160,11 @@
             font-size: 24px;
             font-weight: 600;
             margin:30px auto;
+        }
+	.cta-title2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin:-20px auto;
         }
         
         .cta-text {
@@ -272,6 +290,7 @@
             .main-visual {
                 height: 200px;
             }
+
         }
 
 
@@ -284,7 +303,7 @@
 }
 
 .feature-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
     color: #333;
@@ -435,10 +454,10 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="col-12 col-md-6">
       <div class="text-container">
         <h2 class="roboto-bold-gray-24px">ひとつひとつの暮らしを想う</h2>
-        <p>1960年の創業以来、相模原の地に根ざし、お客様の豊かな暮らしを実現するための家づくりをお手伝いしてきました。</p>
+        <p>1960年の創業以来、相模原の地に根ざし、<br>お客様の豊かな暮らしを実現するための<br>家づくりをお手伝いしてきました。</p>
         <p class="roboto-bold-gray-24px">「SOLE=たったひとつの」</p>
         <p class="roboto-bold-gray-24px">「LIVING=暮らし」</p>
-        <p>の名前には、ひとつひとつのご家族の想いを大切にし、建てたあとも末永く暮らしに寄り添える存在でありたい。そんな願いが込められています。</p>
+        <p>の名前には、<br>ひとつひとつのご家族の想いを大切にし、<br>建てたあとも末永く暮らしに寄り添える存在でありたい。<br>そんな願いが込められています。</p>
       </div>
     </div>
     <div class="col-12 col-md-6">
@@ -454,40 +473,40 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="arceo-header">
                 <div class="cta-section"><h1 class="main-title"> 自由設計の注文住宅</h1></div>
                 <h2 class="sub-title">五感を満たす家</h2>
-		<img src="img/image-33.png" class="img-fluid" alt="ARCEO Logo"> 
-                <p class="catch-copy">医学的根拠に基づき、<br>住むと健康になる自然素材の住宅 "0宣言の家"にデザイン力をプラスした、<br>性能も間取りもデザインにもこだわった<br>フルオーダー住宅</p>
+		<img src="img/arceologo2.png" class="img-fluid logo" alt="ARCEO Logo"> 
+                <p class="catch-copy">医学的根拠に基づき、<br>住むと健康になる自然素材の住宅<br> "0宣言の家"にデザイン力をプラスした、<br>性能も間取りもデザインにもこだわった<br>フルオーダー住宅</p>
             </div>
 
 
  <!-- 特徴セクション -->
 <div class="featuress">
     <div class="feature-item">
-        <h3 class="feature-title">「安心して暮らせる自然素材の家」</h3>
+        <h3 class="feature-title">安心して暮らせる自然素材の家</h3>
         <div class="feature-content">
             <img src="img/feature1.jpg" alt="安心して暮らせる自然素材の家" class="feature-image">
-            <p class="feature-desc">家づくりに使うすべての素材に自然素材を採用。有害なものや住宅の寿命を縮める建材は使いません。
+            <p class="feature-desc">家づくりに使うすべての素材に<br>自然素材を採用。<br>有害なものや住宅の寿命を縮める建材は<br>使いません。
 </p>
         </div>
     </div>
     <div class="feature-item">
-        <h3 class="feature-title">「一年中心地よい住まい」</h3>
+        <h3 class="feature-title">一年中心地よい住まい</h3>
         <div class="feature-content">
             <img src="img/feature2.jpg" alt="一年中心地よい住まい" class="feature-image">
-            <p class="feature-desc">遮熱・断熱・調湿・透湿の4つの特徴を持つ『クワトロ断熱』で、年間を通じて快適な暮らしを実現します。</p>
+            <p class="feature-desc">遮熱・断熱・調湿・透湿の4つの特徴を持つ<br>『クワトロ断熱』で、年間を通じて<br>快適な暮らしを実現します。</p>
         </div>
     </div>
     <div class="feature-item">
-        <h3 class="feature-title">「医学的根拠に基づいた健康住宅」</h3>
+        <h3 class="feature-title">医学的根拠に基づいた健康住宅</h3>
         <div class="feature-content">
             <img src="img/feature3.png" alt="医学的根拠に基づいた健康住宅" class="feature-image">
-            <p class="feature-desc">専門医監修のもと取得したデータでは、高血圧・糖尿病・肥満等の割合が少ないことが確認されています。</p>
+            <p class="feature-desc">専門医監修のもと取得したデータでは、<br>高血圧・糖尿病・肥満等の割合が<br>少ないことが確認されています。</p>
         </div>
     </div>
     <div class="feature-item">
-        <h3 class="feature-title">「暮らしに寄り添う間取り」</h3>
+        <h3 class="feature-title">暮らしに寄り添う間取り</h3>
         <div class="feature-content">
             <img src="img/feature4.jpg" alt="暮らしに寄り添う間取り" class="feature-image">
-            <p class="feature-desc">万人受けする間取りではなく、住まう人にとって特別で価値のある暮らしを第一に考えています。</p>
+            <p class="feature-desc">万人受けする間取りではなく、住まう人にとって特別で価値のある暮らしを<br>第一に考えています。</p>
         </div>
     </div>
 </div>
@@ -495,7 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="cta-section">
                 <h2 class="cta-title">ARCEOの詳しい情報をご覧になりませんか？</h2>
-                <p class="cta-text">実際の見学会や個別相談会で、「五感を満たす家」の心地よさをぜひ体感してください。LINE登録で最新の見学会情報や限定資料をお届けします。</p>
+                <p class="cta-text">実際の見学会や個別相談会で、<br>「五感を満たす家」の心地よさをぜひ<br>体感してください。<br>LINE登録で最新の見学会情報や<br>限定資料をお届けします。</p>
                 <div class="cta-buttons">
                     <a href="https://sole-living.soyo-inc.co.jp/entry/#form" class="cta-button cta-primary">見学予約をする</a>
                     <a href="https://liff.line.me/2006831869-Lr67VbWe/landing?follow=%40526ssvbf&lp=9Y4Wf1&liff_id=2006831869-Lr67VbWe" class="cta-button cta-secondary">LINE登録はこちら</a>
@@ -547,8 +566,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="customer-testimonial mb-5">
   <div class="container">
     <div class="row align-items-center mb-3">
-      <div class="col-md-3">
-        <img src="img/230610_003.jpg" alt="神奈川県の施工事例外観" class="img-fluid rounded-circle mb-2">
+      <div class="col-md-3 img-p">
+        <img src="img/230610_003.jpg" alt="神奈川県の施工事例外観" class="img-fluid img-circle mb-2">
       </div>
       <div class="col-md-9">
         <div class="customer-info p-3 bg-light rounded">
@@ -557,10 +576,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="mb-1"><strong>神奈川県</strong></p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>家族構成:</strong> ご夫婦+お子様1人</p>
+              <p class="mb-1">ご夫婦+お子様1人</p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>間取り:</strong> 3LDK+バイクガレージ</p>
+              <p class="mb-1">3LDK+バイクガレージ</p>
             </div>
           </div>
         </div>
@@ -573,12 +592,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="badge bg-light text-dark p-2">断熱性能</span>
     </div>
     
-    <h3 class="mb-3">自然素材と高い気密・断熱性能で冬も快適</h3>
+    <h3 class="mb-3 gradient-text">自然素材と高い気密・断熱性能で冬も快適</h3>
     
     <div class="testimonial-content mb-4">
-      <p>以前の家がとても寒く、「熱効率の良い家」を求めて調べていたところ、SOLE LIVINGさんを知りました。アレルギー体質の家族がいるため、<span class="highlight">断熱材や接着剤まで自然素材</span>にこだわっている点にも惹かれました。</p>
+      <p>以前の家がとても寒く、「熱効率の良い家」を求めて調べていたところ、SOLE LIVINGさんを知りました。アレルギー体質の家族がいるため、<span class="gradient-underline">断熱材や接着剤まで自然素材</span>にこだわっている点にも惹かれました。</p>
       <p>間取りは、将来を考えて1階で生活が完結するプランに。さらに、書斎やバイクガレージ、スタディコーナーなど、自分たちの時間を楽しめるスペースも叶いました。</p>
-      <p>住んでみて、<span class="highlight">無垢の床の暖かさ</span>に感動！床暖房なしでも快適です。漆喰壁のおかげで室内干しの洗濯物がよく乾き、遮音性にも優れているので外の騒音も気にならなくなりました。</p>
+      <p>住んでみて、<span class="gradient-underline">無垢の床の暖かさ</span>に感動！床暖房なしでも快適です。漆喰壁のおかげで室内干しの洗濯物がよく乾き、遮音性にも優れているので外の騒音も気にならなくなりました。</p>
       <p>SOLE LIVINGさんは対話がスムーズで押しつけがなく、説明も丁寧で安心できました。職人さんたちも皆感じが良く、家づくりを気持ちよく進められたことも印象に残っています。</p>
     </div>
     
@@ -600,8 +619,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="customer-testimonial mb-5">
   <div class="container">
     <div class="row align-items-center mb-3">
-      <div class="col-md-3">
-        <img src="img/02_gaikan_230521.jpg" alt="神奈川県の施工事例外観" class="img-fluid rounded-circle mb-2">
+      <div class="col-md-3 img-p">
+        <img src="img/img2-0.jpg" alt="神奈川県の施工事例外観" class="img-fluid img-circle mb-2">
       </div>
       <div class="col-md-9">
         <div class="customer-info p-3 bg-light rounded">
@@ -610,10 +629,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="mb-1"><strong>神奈川県</strong></p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>家族構成:</strong> ご両親+ご夫婦+お子様3人</p>
+              <p class="mb-1"> ご両親+ご夫婦+お子様3人</p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>間取り:</strong> 4LDK+3LDK+サンルーム</p>
+              <p class="mb-1"> 4LDK+3LDK+サンルーム</p>
             </div>
           </div>
         </div>
@@ -626,21 +645,21 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="badge bg-light text-dark p-2">断熱性能</span>
     </div>
     
-    <h4 class="mb-3">秀逸なプラン提案で依頼を決定</h4>
+    <h4 class="mb-3 gradient-text">秀逸なプラン提案で依頼を決定</h4>
     
     <div class="testimonial-content mb-4">
-      <p>SOLE LIVINGを選んだ理由は、高い耐震・断熱性能に加え、自然素材に包まれた快適な住まいが実現できること。そして何より、設計担当の松尾さんが提案してくれた二世帯住宅の<span class="highlight">プランが魅力的</span>でした。</p>
-      <p>2階の子世帯は、開放的なリビングやロフト、スタディコーナー、小上がりの畳スペースなどを希望しましたが、特にこだわったのは家事ラク動線。洗濯後サンルームに干し、そのままウォークインクローゼットへ収納できる<span class="highlight">便利な洗濯動線</span>です。</p>
+      <p>SOLE LIVINGを選んだ理由は、高い耐震・断熱性能に加え、自然素材に包まれた快適な住まいが実現できること。そして何より、設計担当の松尾さんが提案してくれた二世帯住宅の<span class="gradient-underline">プランが魅力的</span>でした。</p>
+      <p>2階の子世帯は、開放的なリビングやロフト、スタディコーナー、小上がりの畳スペースなどを希望しましたが、特にこだわったのは家事ラク動線。洗濯後サンルームに干し、そのままウォークインクローゼットへ収納できる<span class="gradient-underline">便利な洗濯動線</span>です。</p>
       <p>とにかく暖かく、家の中で寒さを感じることがありません。</p>
       <p>SOLE LIVINGさんは親切で相談しやすく、コスパにも満足しています。</p>
     </div>
     
     <div class="row photos-gallery">
       <div class="col-md-4">
-        <img src="img/11_oyasetai_230521.jpg" alt="リビング" class="img-fluid mb-3">
+        <img src="img/img2-1.jpg" alt="リビング" class="img-fluid mb-3">
       </div>
       <div class="col-md-4">
-        <img src="img/42_kosetai_2F_230521.jpg" alt="キッチン" class="img-fluid mb-3">
+        <img src="img/img2-2.jpg" alt="キッチン" class="img-fluid mb-3">
       </div>
       <div class="col-md-4">
         <img src="img/49_kosetai_2F_230521.jpg" alt="家族スペース" class="img-fluid mb-3">
@@ -653,8 +672,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="customer-testimonial mb-5">
   <div class="container">
     <div class="row align-items-center mb-3">
-      <div class="col-md-3">
-        <img src="img/230627_001.jpg" alt="東京都の施工事例外観" class="img-fluid rounded-circle mb-2">
+      <div class="col-md-3 img-p">
+        <img src="img/230627_001.jpg" alt="東京都の施工事例外観" class="img-fluid img-circle mb-2">
       </div>
       <div class="col-md-9">
         <div class="customer-info p-3 bg-light rounded">
@@ -663,10 +682,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="mb-1"><strong>東京都</strong></p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>家族構成:</strong> ご夫婦+お子様2人</p>
+              <p class="mb-1">ご夫婦+お子様2人</p>
             </div>
             <div class="col-md-4">
-              <p class="mb-1"><strong>間取り:</strong> 4LDK+ロフト</p>
+              <p class="mb-1">4LDK+ロフト</p>
             </div>
           </div>
         </div>
@@ -679,13 +698,13 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="badge bg-light text-dark p-2">断熱性能</span>
     </div>
     
-    <h4 class="mb-3">自然に包まれる理想の住まい</h4>
+    <h4 class="mb-3 gradient-text">自然に包まれる理想の住まい</h4>
     
     <div class="testimonial-content mb-4">
-      <p>「緑に囲まれて、自然を感じながら暮らしたい」—— そんな想いを叶えてくれたのが、設計士の石原さんでした。南向きの庭に大きな窓を配し、光がたっぷり入る開放的な<span class="highlight">眺望重視のプラン</span>。無垢の木をふんだんに使い、回遊動線や豊富な収納など、細かなこだわりにも丁寧に応えてくれました。</p>
+      <p>「緑に囲まれて、自然を感じながら暮らしたい」—— そんな想いを叶えてくれたのが、設計士の石原さんでした。南向きの庭に大きな窓を配し、光がたっぷり入る開放的な<span class="gradient-underline">眺望重視のプラン</span>。無垢の木をふんだんに使い、回遊動線や豊富な収納など、細かなこだわりにも丁寧に応えてくれました。</p>
       <p>1階はアイランドキッチンを中心に、2階は吹き抜けを囲む回遊動線を採用。ファミリークローゼットやロフト収納も充実し、スッキリ快適に暮らせます。</p>
       <p>高い断熱性のおかげで、エアコンは各階に1台のみ。冬は薪ストーブ1台でぽかぽかです。</p>
-      <p>カーテンのない窓は、まるで<span class="highlight">緑を切り取ったピクチャーウインドウ</span>。自然に癒される理想の暮らしを満喫しています。</p>
+      <p>カーテンのない窓は、まるで<span class="gradient-underline">緑を切り取ったピクチャーウインドウ</span>。自然に癒される理想の暮らしを満喫しています。</p>
     </div>
     
     <div class="row photos-gallery">
@@ -693,10 +712,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/230627_011.jpg" alt="キッチン" class="img-fluid mb-3">
       </div>
       <div class="col-md-4">
-        <img src="img/230627_019.jpg" alt="リビング" class="img-fluid mb-3">
+        <img src="img/img3-1.jpg" alt="リビング" class="img-fluid mb-3">
       </div>
       <div class="col-md-4">
-        <img src="img/230627_044.jpg" alt="収納スペース" class="img-fluid mb-3">
+        <img src="img/img3-2.jpg" alt="収納スペース" class="img-fluid mb-3">
       </div>
     </div>
   </div>
@@ -715,13 +734,11 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="col-md-5 col-lg-6">
                 <div class="cta-content text-center text-md-start p-4 p-md-5">
-                    <h3 class="cta-title mb-4">まずは<span class="highlight-text">実感</span>してください</h3>
-                    <p class="cta-description mb-4">理想の住まいづくりは、百聞は一見にしかず。<br>私たちの家づくりの想いを、ぜひ五感でお確かめください。</p>
-                    <a href="https://sole-living.soyo-inc.co.jp/entry/#form" class="cta-button d-inline-block position-relative" target="_blank">
-                        ご予約はこちらから
-                        <i class="fas fa-arrow-right ms-2"></i>
-                        <span class="btn-hover-effect position-absolute"></span>
-                    </a>
+                    <h3 class="cta-title2 mb-4">まずは<span class="highlight-text2">実感</span>して<br>ください</h3>
+                    <p class="cta-description mb-4">理想の住まいづくりは、<br>百聞は一見にしかず。<br>私たちの家づくりの想いを、<br>ぜひ五感でお確かめください。</p>
+ <div class="cta-buttons">
+                    <a href="https://sole-living.soyo-inc.co.jp/entry/#form" class="cta-button cta-primary">見学予約をする</a></div>
+                  
                 </div>
             </div>
         </div>
@@ -767,17 +784,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-md-2 feature-box">
                         <div class="feature-number">03</div>
                         <img src="img/icon3.svg" alt="Feature 3">
-                        <p class="feature-text lh-lg">次世代住宅「スマートハウス」が体験できる！</p>
+                        <p class="feature-text lh-lg">次世代住宅「スマートハウス」が<br>体験できる！</p>
                     </div>
                     <div class="col-md-2 feature-box">
                         <div class="feature-number">04</div>
                         <img src="img/icon4.svg" alt="Feature 4">
-                        <p class="feature-text lh-lg">夏は涼しい、冬は暖かい高性能な断熱住宅が体験できる！</p>
+                        <p class="feature-text lh-lg">夏は涼しい、冬は暖かい高性能な断熱住宅が<br>体験できる！</p>
                     </div>
                     <div class="col-md-2 feature-box">
                         <div class="feature-number">05</div>
                         <img src="img/icon5.svg" alt="Feature 5">
-                        <p class="feature-text lh-lg">建てた後の暮らしが分かる「宿泊体験」ができる！</p>
+                        <p class="feature-text lh-lg">建てた後の暮らしが分かる「宿泊体験」が<br>できる！</p>
                     </div>
                 </div>
             </div>
@@ -792,7 +809,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- CTAセクション -->
             <div class="cta-section">
                 <h2 class="cta-title">ARCEOの詳しい情報をご覧になりませんか？</h2>
-                <p class="cta-text">実際の見学会や個別相談会で、「五感を満たす家」の心地よさをぜひ体感してください。LINE登録で最新の見学会情報や限定資料をお届けします。</p>
+                <p class="cta-text">実際の見学会や個別相談会で、<br>「五感を満たす家」の心地よさをぜひ<br>体感してください。<br>LINE登録で最新の見学会情報や<br>限定資料をお届けします。</p>
                 <div class="cta-buttons">
                     <a href="https://sole-living.soyo-inc.co.jp/entry/#form" class="cta-button cta-primary">見学予約をする</a>
                     <a href="https://liff.line.me/2006831869-Lr67VbWe/landing?follow=%40526ssvbf&lp=9Y4Wf1&liff_id=2006831869-Lr67VbWe" class="cta-button cta-secondary">LINE登録はこちら</a>
