@@ -281,11 +281,11 @@ p{
 }
 
  .article-4, .article-5, .article-6, .article-7, .article-8, .article-9, .article-10-2 {
-            padding: 50px 0;
+            padding: 10px 0;
             text-align: center;
         }
         .article-4 h2, .article-5 h2, .article-6 h2, .article-7 h2, .article-8 h2, .article-9 h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -518,7 +518,13 @@ p{
   display: inline-block;
   margin-bottom: 20px;
 }
-
+.highlight-text2 {
+  background-color: #ffab04;
+  padding: 12px 18px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 20px 5px;
+}
 .quote-content {
   padding-left: 18px;
   border-left: 2px solid #d8c9b0;
@@ -565,10 +571,6 @@ p{
     width: 100px;
     height: 100px;
   }
-  
-  .highlight-text {
-    font-size: 18px;
-  }
 }
 	/* Text gradient highlighting styles */
 .highlight-gradient {
@@ -591,6 +593,7 @@ p{
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-weight:bold;
 }
 
 /* Background gradient style */
