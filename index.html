@@ -538,6 +538,29 @@ window.addEventListener('beforeunload', function (e) {
   e.preventDefault();
   e.returnValue = '';
 });
+
+// スマートフォン向け離脱検知の例
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden' && !popupShown) {
+    showExitPopup();
+  }
+});
+
+// バックボタン検知（History APIを使用）
+window.addEventListener('popstate', function(e) {
+  // 履歴に状態を追加
+  if (!popupShown) {
+    showExitPopup();
+    history.pushState({page: 'current'}, document.title, window.location.href);
+    e.preventDefault();
+  }
+});
+
+// ページ読み込み時に履歴に状態を追加
+window.addEventListener('load', function() {
+  history.pushState({page: 'current'}, document.title, window.location.href);
+});
   </script>
+
 </body>
 </html>
